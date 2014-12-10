@@ -1,5 +1,4 @@
 package com.d3.automation;
-//import Utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,6 +16,7 @@ import org.testng.annotations.*;
 import org.testng.ITestResult;
 
 import com.d3.testrails.D3TestRails;
+import com.d3.utils.Utils;
 import com.gurock.testrail.APIException;
 
 
@@ -31,7 +31,7 @@ public class D3AutomationDemo {
 	//AITemplate _aiTemp;
 	D3BusinessLogic _aiTemp = new D3BusinessLogic();
 	D3TestRails d3testrails = new D3TestRails();
-
+	Utils utils = new Utils();
 	
 	@BeforeTest
 	public void launchBrowser()
@@ -42,11 +42,11 @@ public class D3AutomationDemo {
 //		driver = new InternetExplorerDriver();
 		
 //  FIREFOX  //
-		//driver = new FirefoxDriver();
+		driver = new FirefoxDriver();
 		
 //  CHROME  //
-		System.setProperty("webdriver.chrome.driver", "C:\\selenium-2.44.0\\chromedriver.exe");
-		driver = new ChromeDriver();
+//		System.setProperty("webdriver.chrome.driver", "C:\\selenium-2.44.0\\chromedriver.exe");
+//		driver = new ChromeDriver();
 		
 		
 		driver.manage().window().maximize(); 

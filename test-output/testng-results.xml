@@ -1,386 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" total="12" passed="9">
+<testng-results skipped="0" failed="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23398" started-at="2014-12-10T16:52:29Z" finished-at="2014-12-10T16:52:53Z">
+  <suite name="Default suite" duration-ms="19469" started-at="2014-12-10T19:22:45Z" finished-at="2014-12-10T19:23:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23398" started-at="2014-12-10T16:52:29Z" finished-at="2014-12-10T16:52:53Z">
+    <test name="Default test" duration-ms="19469" started-at="2014-12-10T19:22:45Z" finished-at="2014-12-10T19:23:04Z">
       <class name="com.d3.automation.D3AutomationDemo">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="launchBrowser" is-config="true" duration-ms="9133" started-at="2014-12-10T10:52:29Z" finished-at="2014-12-10T10:52:38Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="launchBrowser" is-config="true" duration-ms="6081" started-at="2014-12-10T13:22:45Z" finished-at="2014-12-10T13:22:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyHomepageTitle()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyHomepageTitle" duration-ms="1590" started-at="2014-12-10T10:52:38Z" finished-at="2014-12-10T10:52:40Z">
+        <test-method status="PASS" signature="verifyHomepageTitle()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="verifyHomepageTitle" duration-ms="16" started-at="2014-12-10T13:22:51Z" finished-at="2014-12-10T13:22:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomepageTitle -->
-        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="1181" started-at="2014-12-10T10:52:40Z" finished-at="2014-12-10T10:52:41Z">
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="updateTestRails" is-config="true" duration-ms="1219" started-at="2014-12-10T13:22:51Z" finished-at="2014-12-10T13:22:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyHomepageTitle status=SUCCESS method=D3AutomationDemo.verifyHomepageTitle()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+                <![CDATA[[TestResult name=verifyHomepageTitle status=SUCCESS method=D3AutomationDemo.verifyHomepageTitle()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateTestRails -->
-        <test-method status="FAIL" signature="verifyInvalidLogin()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyInvalidLogin" duration-ms="609" started-at="2014-12-10T10:52:41Z" finished-at="2014-12-10T10:52:42Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[UnknownError: Cannot release a button when no button is pressed.'UnknownError: Cannot release a button when no button is pressed.' when calling method: [wdIMouse::up]
-Command duration or timeout: 31 milliseconds
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
-System info: host: 'Herb', ip: '192.168.2.29', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ac8f67db-0220-4e00-8693-909da553949a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.'UnknownError: Cannot release a button when no button is pressed.' when calling method: [wdIMouse::up]
-Command duration or timeout: 31 milliseconds
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
-System info: host: 'Herb', ip: '192.168.2.29', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ac8f67db-0220-4e00-8693-909da553949a
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:614)
-	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:32)
-	at org.openqa.selenium.remote.RemoteMouse.mouseUp(RemoteMouse.java:82)
-	at org.openqa.selenium.interactions.ButtonReleaseAction.perform(ButtonReleaseAction.java:40)
-	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:31)
-	at com.d3.automation.D3BusinessLogic.submit(D3BusinessLogic.java:64)
-	at com.d3.automation.D3AutomationDemo.verifyInvalidLogin(D3AutomationDemo.java:72)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.'UnknownError: Cannot release a button when no button is pressed.' when calling method: [wdIMouse::up]
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
-System info: host: 'Herb', ip: '192.168.2.29', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_25'
-Driver info: driver.version: unknown
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method status="PASS" signature="verifyInvalidLogin()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="verifyInvalidLogin" duration-ms="3039" started-at="2014-12-10T13:22:52Z" finished-at="2014-12-10T13:22:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidLogin -->
-        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="453" started-at="2014-12-10T10:52:42Z" finished-at="2014-12-10T10:52:42Z">
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="updateTestRails" is-config="true" duration-ms="495" started-at="2014-12-10T13:22:55Z" finished-at="2014-12-10T13:22:56Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyInvalidLogin status=FAILURE method=D3AutomationDemo.verifyInvalidLogin()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+                <![CDATA[[TestResult name=verifyInvalidLogin status=SUCCESS method=D3AutomationDemo.verifyInvalidLogin()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateTestRails -->
-        <test-method status="FAIL" signature="verifyValidLogin()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyValidLogin" duration-ms="882" started-at="2014-12-10T10:52:42Z" finished-at="2014-12-10T10:52:43Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[UnknownError: Cannot release a button when no button is pressed.'UnknownError: Cannot release a button when no button is pressed.' when calling method: [wdIMouse::up]
-Command duration or timeout: 54 milliseconds
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
-System info: host: 'Herb', ip: '192.168.2.29', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ac8f67db-0220-4e00-8693-909da553949a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.'UnknownError: Cannot release a button when no button is pressed.' when calling method: [wdIMouse::up]
-Command duration or timeout: 54 milliseconds
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
-System info: host: 'Herb', ip: '192.168.2.29', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ac8f67db-0220-4e00-8693-909da553949a
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:614)
-	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:32)
-	at org.openqa.selenium.remote.RemoteMouse.mouseUp(RemoteMouse.java:82)
-	at org.openqa.selenium.interactions.ButtonReleaseAction.perform(ButtonReleaseAction.java:40)
-	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:31)
-	at com.d3.automation.D3BusinessLogic.submit(D3BusinessLogic.java:64)
-	at com.d3.automation.D3AutomationDemo.verifyValidLogin(D3AutomationDemo.java:86)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.'UnknownError: Cannot release a button when no button is pressed.' when calling method: [wdIMouse::up]
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
-System info: host: 'Herb', ip: '192.168.2.29', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_25'
-Driver info: driver.version: unknown
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method status="PASS" signature="verifyValidLogin()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="verifyValidLogin" duration-ms="267" started-at="2014-12-10T13:22:56Z" finished-at="2014-12-10T13:22:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValidLogin -->
-        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="453" started-at="2014-12-10T10:52:43Z" finished-at="2014-12-10T10:52:44Z">
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="updateTestRails" is-config="true" duration-ms="473" started-at="2014-12-10T13:22:56Z" finished-at="2014-12-10T13:22:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyValidLogin status=FAILURE method=D3AutomationDemo.verifyValidLogin()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+                <![CDATA[[TestResult name=verifyValidLogin status=SUCCESS method=D3AutomationDemo.verifyValidLogin()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateTestRails -->
-        <test-method status="FAIL" signature="verifySecretQuestion()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifySecretQuestion" duration-ms="407" started-at="2014-12-10T10:52:44Z" finished-at="2014-12-10T10:52:44Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[UnknownError: Cannot release a button when no button is pressed.'UnknownError: Cannot release a button when no button is pressed.' when calling method: [wdIMouse::up]
-Command duration or timeout: 47 milliseconds
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
-System info: host: 'Herb', ip: '192.168.2.29', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ac8f67db-0220-4e00-8693-909da553949a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.'UnknownError: Cannot release a button when no button is pressed.' when calling method: [wdIMouse::up]
-Command duration or timeout: 47 milliseconds
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
-System info: host: 'Herb', ip: '192.168.2.29', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ac8f67db-0220-4e00-8693-909da553949a
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:614)
-	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:32)
-	at org.openqa.selenium.remote.RemoteMouse.mouseUp(RemoteMouse.java:82)
-	at org.openqa.selenium.interactions.ButtonReleaseAction.perform(ButtonReleaseAction.java:40)
-	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:31)
-	at com.d3.automation.D3BusinessLogic.submit(D3BusinessLogic.java:64)
-	at com.d3.automation.D3AutomationDemo.verifySecretQuestion(D3AutomationDemo.java:93)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.'UnknownError: Cannot release a button when no button is pressed.' when calling method: [wdIMouse::up]
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
-System info: host: 'Herb', ip: '192.168.2.29', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_25'
-Driver info: driver.version: unknown
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method status="PASS" signature="verifySecretQuestion()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="verifySecretQuestion" duration-ms="180" started-at="2014-12-10T13:22:57Z" finished-at="2014-12-10T13:22:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySecretQuestion -->
-        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="453" started-at="2014-12-10T10:52:44Z" finished-at="2014-12-10T10:52:45Z">
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="updateTestRails" is-config="true" duration-ms="468" started-at="2014-12-10T13:22:57Z" finished-at="2014-12-10T13:22:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifySecretQuestion status=FAILURE method=D3AutomationDemo.verifySecretQuestion()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+                <![CDATA[[TestResult name=verifySecretQuestion status=SUCCESS method=D3AutomationDemo.verifySecretQuestion()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateTestRails -->
-        <test-method status="PASS" signature="verifyPlanButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyPlanButton" duration-ms="1788" started-at="2014-12-10T10:52:45Z" finished-at="2014-12-10T10:52:46Z">
+        <test-method status="PASS" signature="verifyPlanButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="verifyPlanButton" duration-ms="670" started-at="2014-12-10T13:22:57Z" finished-at="2014-12-10T13:22:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPlanButton -->
-        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="453" started-at="2014-12-10T10:52:46Z" finished-at="2014-12-10T10:52:47Z">
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="updateTestRails" is-config="true" duration-ms="470" started-at="2014-12-10T13:22:58Z" finished-at="2014-12-10T13:22:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyPlanButton status=SUCCESS method=D3AutomationDemo.verifyPlanButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+                <![CDATA[[TestResult name=verifyPlanButton status=SUCCESS method=D3AutomationDemo.verifyPlanButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateTestRails -->
-        <test-method status="PASS" signature="verifyMessagesButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyMessagesButton" duration-ms="391" started-at="2014-12-10T10:52:47Z" finished-at="2014-12-10T10:52:47Z">
+        <test-method status="PASS" signature="verifyMessagesButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="verifyMessagesButton" duration-ms="73" started-at="2014-12-10T13:22:58Z" finished-at="2014-12-10T13:22:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyMessagesButton -->
-        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="443" started-at="2014-12-10T10:52:47Z" finished-at="2014-12-10T10:52:48Z">
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="updateTestRails" is-config="true" duration-ms="474" started-at="2014-12-10T13:22:58Z" finished-at="2014-12-10T13:22:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyMessagesButton status=SUCCESS method=D3AutomationDemo.verifyMessagesButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+                <![CDATA[[TestResult name=verifyMessagesButton status=SUCCESS method=D3AutomationDemo.verifyMessagesButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateTestRails -->
-        <test-method status="PASS" signature="verifyAccountsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyAccountsButton" duration-ms="235" started-at="2014-12-10T10:52:48Z" finished-at="2014-12-10T10:52:48Z">
+        <test-method status="PASS" signature="verifyAccountsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="verifyAccountsButton" duration-ms="82" started-at="2014-12-10T13:22:59Z" finished-at="2014-12-10T13:22:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAccountsButton -->
-        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="437" started-at="2014-12-10T10:52:48Z" finished-at="2014-12-10T10:52:48Z">
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="updateTestRails" is-config="true" duration-ms="470" started-at="2014-12-10T13:22:59Z" finished-at="2014-12-10T13:22:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAccountsButton status=SUCCESS method=D3AutomationDemo.verifyAccountsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+                <![CDATA[[TestResult name=verifyAccountsButton status=SUCCESS method=D3AutomationDemo.verifyAccountsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateTestRails -->
-        <test-method status="PASS" signature="verifyTransactionsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyTransactionsButton" duration-ms="266" started-at="2014-12-10T10:52:48Z" finished-at="2014-12-10T10:52:49Z">
+        <test-method status="PASS" signature="verifyTransactionsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="verifyTransactionsButton" duration-ms="104" started-at="2014-12-10T13:22:59Z" finished-at="2014-12-10T13:23:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTransactionsButton -->
-        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="453" started-at="2014-12-10T10:52:49Z" finished-at="2014-12-10T10:52:49Z">
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="updateTestRails" is-config="true" duration-ms="468" started-at="2014-12-10T13:23:00Z" finished-at="2014-12-10T13:23:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyTransactionsButton status=SUCCESS method=D3AutomationDemo.verifyTransactionsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+                <![CDATA[[TestResult name=verifyTransactionsButton status=SUCCESS method=D3AutomationDemo.verifyTransactionsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateTestRails -->
-        <test-method status="PASS" signature="verifyMoneyMovementButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyMoneyMovementButton" duration-ms="312" started-at="2014-12-10T10:52:49Z" finished-at="2014-12-10T10:52:49Z">
+        <test-method status="PASS" signature="verifyMoneyMovementButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="verifyMoneyMovementButton" duration-ms="73" started-at="2014-12-10T13:23:00Z" finished-at="2014-12-10T13:23:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyMoneyMovementButton -->
-        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="453" started-at="2014-12-10T10:52:49Z" finished-at="2014-12-10T10:52:50Z">
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="updateTestRails" is-config="true" duration-ms="477" started-at="2014-12-10T13:23:00Z" finished-at="2014-12-10T13:23:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyMoneyMovementButton status=SUCCESS method=D3AutomationDemo.verifyMoneyMovementButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+                <![CDATA[[TestResult name=verifyMoneyMovementButton status=SUCCESS method=D3AutomationDemo.verifyMoneyMovementButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateTestRails -->
-        <test-method status="PASS" signature="verifyPlanningButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyPlanningButton" duration-ms="745" started-at="2014-12-10T10:52:50Z" finished-at="2014-12-10T10:52:51Z">
+        <test-method status="PASS" signature="verifyPlanningButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="verifyPlanningButton" duration-ms="77" started-at="2014-12-10T13:23:01Z" finished-at="2014-12-10T13:23:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPlanningButton -->
-        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="438" started-at="2014-12-10T10:52:51Z" finished-at="2014-12-10T10:52:51Z">
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="updateTestRails" is-config="true" duration-ms="463" started-at="2014-12-10T13:23:01Z" finished-at="2014-12-10T13:23:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyPlanningButton status=SUCCESS method=D3AutomationDemo.verifyPlanningButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+                <![CDATA[[TestResult name=verifyPlanningButton status=SUCCESS method=D3AutomationDemo.verifyPlanningButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateTestRails -->
-        <test-method status="PASS" signature="verifyHelpButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyHelpButton" duration-ms="234" started-at="2014-12-10T10:52:51Z" finished-at="2014-12-10T10:52:51Z">
+        <test-method status="PASS" signature="verifyHelpButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="verifyHelpButton" duration-ms="81" started-at="2014-12-10T13:23:01Z" finished-at="2014-12-10T13:23:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHelpButton -->
-        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="459" started-at="2014-12-10T10:52:51Z" finished-at="2014-12-10T10:52:52Z">
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="updateTestRails" is-config="true" duration-ms="1140" started-at="2014-12-10T13:23:01Z" finished-at="2014-12-10T13:23:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyHelpButton status=SUCCESS method=D3AutomationDemo.verifyHelpButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+                <![CDATA[[TestResult name=verifyHelpButton status=SUCCESS method=D3AutomationDemo.verifyHelpButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateTestRails -->
-        <test-method status="PASS" signature="verifySettingsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifySettingsButton" duration-ms="266" started-at="2014-12-10T10:52:52Z" finished-at="2014-12-10T10:52:52Z">
+        <test-method status="PASS" signature="verifySettingsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="verifySettingsButton" duration-ms="134" started-at="2014-12-10T13:23:02Z" finished-at="2014-12-10T13:23:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySettingsButton -->
-        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="453" started-at="2014-12-10T10:52:52Z" finished-at="2014-12-10T10:52:52Z">
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="updateTestRails" is-config="true" duration-ms="796" started-at="2014-12-10T13:23:02Z" finished-at="2014-12-10T13:23:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifySettingsButton status=SUCCESS method=D3AutomationDemo.verifySettingsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+                <![CDATA[[TestResult name=verifySettingsButton status=SUCCESS method=D3AutomationDemo.verifySettingsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateTestRails -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="terminateBrowser" is-config="true" duration-ms="375" started-at="2014-12-10T10:52:52Z" finished-at="2014-12-10T10:52:53Z">
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:com.d3.automation.D3AutomationDemo@1c6a36e]" name="terminateBrowser" is-config="true" duration-ms="1168" started-at="2014-12-10T13:23:03Z" finished-at="2014-12-10T13:23:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
