@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="12" passed="12">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="17596" started-at="2014-12-10T16:20:06Z" finished-at="2014-12-10T16:20:23Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="17596" started-at="2014-12-10T16:20:06Z" finished-at="2014-12-10T16:20:23Z">
+      <class name="com.d3.automation.D3AutomationDemo">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="launchBrowser" is-config="true" duration-ms="5406" started-at="2014-12-10T10:20:06Z" finished-at="2014-12-10T10:20:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="verifyHomepageTitle()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyHomepageTitle" duration-ms="16" started-at="2014-12-10T10:20:11Z" finished-at="2014-12-10T10:20:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomepageTitle -->
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="1141" started-at="2014-12-10T10:20:11Z" finished-at="2014-12-10T10:20:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyHomepageTitle status=SUCCESS method=D3AutomationDemo.verifyHomepageTitle()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateTestRails -->
+        <test-method status="PASS" signature="verifyInvalidLogin()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyInvalidLogin" duration-ms="2945" started-at="2014-12-10T10:20:12Z" finished-at="2014-12-10T10:20:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidLogin -->
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="452" started-at="2014-12-10T10:20:15Z" finished-at="2014-12-10T10:20:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyInvalidLogin status=SUCCESS method=D3AutomationDemo.verifyInvalidLogin()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateTestRails -->
+        <test-method status="PASS" signature="verifyValidLogin()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyValidLogin" duration-ms="265" started-at="2014-12-10T10:20:16Z" finished-at="2014-12-10T10:20:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValidLogin -->
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="444" started-at="2014-12-10T10:20:16Z" finished-at="2014-12-10T10:20:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyValidLogin status=SUCCESS method=D3AutomationDemo.verifyValidLogin()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateTestRails -->
+        <test-method status="PASS" signature="verifySecretQuestion()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifySecretQuestion" duration-ms="181" started-at="2014-12-10T10:20:16Z" finished-at="2014-12-10T10:20:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySecretQuestion -->
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="472" started-at="2014-12-10T10:20:17Z" finished-at="2014-12-10T10:20:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySecretQuestion status=SUCCESS method=D3AutomationDemo.verifySecretQuestion()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateTestRails -->
+        <test-method status="PASS" signature="verifyPlanButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyPlanButton" duration-ms="699" started-at="2014-12-10T10:20:17Z" finished-at="2014-12-10T10:20:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPlanButton -->
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="455" started-at="2014-12-10T10:20:18Z" finished-at="2014-12-10T10:20:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPlanButton status=SUCCESS method=D3AutomationDemo.verifyPlanButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateTestRails -->
+        <test-method status="PASS" signature="verifyMessagesButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyMessagesButton" duration-ms="89" started-at="2014-12-10T10:20:18Z" finished-at="2014-12-10T10:20:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMessagesButton -->
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="458" started-at="2014-12-10T10:20:18Z" finished-at="2014-12-10T10:20:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMessagesButton status=SUCCESS method=D3AutomationDemo.verifyMessagesButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateTestRails -->
+        <test-method status="PASS" signature="verifyAccountsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyAccountsButton" duration-ms="137" started-at="2014-12-10T10:20:19Z" finished-at="2014-12-10T10:20:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAccountsButton -->
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="456" started-at="2014-12-10T10:20:19Z" finished-at="2014-12-10T10:20:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAccountsButton status=SUCCESS method=D3AutomationDemo.verifyAccountsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateTestRails -->
+        <test-method status="PASS" signature="verifyTransactionsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyTransactionsButton" duration-ms="108" started-at="2014-12-10T10:20:19Z" finished-at="2014-12-10T10:20:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTransactionsButton -->
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="453" started-at="2014-12-10T10:20:20Z" finished-at="2014-12-10T10:20:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTransactionsButton status=SUCCESS method=D3AutomationDemo.verifyTransactionsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateTestRails -->
+        <test-method status="PASS" signature="verifyMoneyMovementButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyMoneyMovementButton" duration-ms="82" started-at="2014-12-10T10:20:20Z" finished-at="2014-12-10T10:20:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMoneyMovementButton -->
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="450" started-at="2014-12-10T10:20:20Z" finished-at="2014-12-10T10:20:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMoneyMovementButton status=SUCCESS method=D3AutomationDemo.verifyMoneyMovementButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateTestRails -->
+        <test-method status="PASS" signature="verifyPlanningButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyPlanningButton" duration-ms="82" started-at="2014-12-10T10:20:21Z" finished-at="2014-12-10T10:20:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPlanningButton -->
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="454" started-at="2014-12-10T10:20:21Z" finished-at="2014-12-10T10:20:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPlanningButton status=SUCCESS method=D3AutomationDemo.verifyPlanningButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateTestRails -->
+        <test-method status="PASS" signature="verifyHelpButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifyHelpButton" duration-ms="135" started-at="2014-12-10T10:20:21Z" finished-at="2014-12-10T10:20:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHelpButton -->
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="442" started-at="2014-12-10T10:20:21Z" finished-at="2014-12-10T10:20:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyHelpButton status=SUCCESS method=D3AutomationDemo.verifyHelpButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateTestRails -->
+        <test-method status="PASS" signature="verifySettingsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="verifySettingsButton" duration-ms="121" started-at="2014-12-10T10:20:22Z" finished-at="2014-12-10T10:20:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySettingsButton -->
+        <test-method status="PASS" signature="updateTestRails(org.testng.ITestResult)[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="updateTestRails" is-config="true" duration-ms="444" started-at="2014-12-10T10:20:22Z" finished-at="2014-12-10T10:20:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySettingsButton status=SUCCESS method=D3AutomationDemo.verifySettingsButton()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateTestRails -->
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:com.d3.automation.D3AutomationDemo@16a9952]" name="terminateBrowser" is-config="true" duration-ms="1187" started-at="2014-12-10T10:20:22Z" finished-at="2014-12-10T10:20:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminateBrowser -->
+      </class> <!-- com.d3.automation.D3AutomationDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
