@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 10 10:20:06 CST 2014</td>
+<td>Started on:</td><td>Wed Dec 10 10:52:29 CST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>17 seconds (17596 ms)</td>
+<tr><td>Total time:</td><td>23 seconds (23398 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,326 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.d3.automation.D3AutomationDemo.verifyInvalidLogin()'><b>verifyInvalidLogin</b><br>Test class: com.d3.automation.D3AutomationDemo</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.&apos;UnknownError: Cannot release a button when no button is pressed.&apos; when calling method: [wdIMouse::up]
+Command duration or timeout: 31 milliseconds
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;Herb&apos;, ip: &apos;192.168.2.29&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ac8f67db-0220-4e00-8693-909da553949a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:614)
+	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:32)
+	at org.openqa.selenium.remote.RemoteMouse.mouseUp(RemoteMouse.java:82)
+	at org.openqa.selenium.interactions.ButtonReleaseAction.perform(ButtonReleaseAction.java:40)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:31)
+	at com.d3.automation.D3BusinessLogic.submit(D3BusinessLogic.java:64)
+	at com.d3.automation.D3AutomationDemo.verifyInvalidLogin(D3AutomationDemo.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.&apos;UnknownError: Cannot release a button when no button is pressed.&apos; when calling method: [wdIMouse::up]
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;Herb&apos;, ip: &apos;192.168.2.29&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: driver.version: unknown
+</pre></div><a href='#' onClick='toggleBox("stack-trace31786418", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace31786418'><pre>org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.&apos;UnknownError: Cannot release a button when no button is pressed.&apos; when calling method: [wdIMouse::up]
+Command duration or timeout: 31 milliseconds
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;Herb&apos;, ip: &apos;192.168.2.29&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ac8f67db-0220-4e00-8693-909da553949a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:614)
+	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:32)
+	at org.openqa.selenium.remote.RemoteMouse.mouseUp(RemoteMouse.java:82)
+	at org.openqa.selenium.interactions.ButtonReleaseAction.perform(ButtonReleaseAction.java:40)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:31)
+	at com.d3.automation.D3BusinessLogic.submit(D3BusinessLogic.java:64)
+	at com.d3.automation.D3AutomationDemo.verifyInvalidLogin(D3AutomationDemo.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.&apos;UnknownError: Cannot release a button when no button is pressed.&apos; when calling method: [wdIMouse::up]
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;Herb&apos;, ip: &apos;192.168.2.29&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: driver.version: unknown
+</pre></div></td>
+<td>0</td>
+<td>com.d3.automation.D3AutomationDemo@16a9952</td></tr>
+<tr>
+<td title='com.d3.automation.D3AutomationDemo.verifySecretQuestion()'><b>verifySecretQuestion</b><br>Test class: com.d3.automation.D3AutomationDemo</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.&apos;UnknownError: Cannot release a button when no button is pressed.&apos; when calling method: [wdIMouse::up]
+Command duration or timeout: 47 milliseconds
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;Herb&apos;, ip: &apos;192.168.2.29&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ac8f67db-0220-4e00-8693-909da553949a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:614)
+	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:32)
+	at org.openqa.selenium.remote.RemoteMouse.mouseUp(RemoteMouse.java:82)
+	at org.openqa.selenium.interactions.ButtonReleaseAction.perform(ButtonReleaseAction.java:40)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:31)
+	at com.d3.automation.D3BusinessLogic.submit(D3BusinessLogic.java:64)
+	at com.d3.automation.D3AutomationDemo.verifySecretQuestion(D3AutomationDemo.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.&apos;UnknownError: Cannot release a button when no button is pressed.&apos; when calling method: [wdIMouse::up]
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;Herb&apos;, ip: &apos;192.168.2.29&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: driver.version: unknown
+</pre></div><a href='#' onClick='toggleBox("stack-trace23687558", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace23687558'><pre>org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.&apos;UnknownError: Cannot release a button when no button is pressed.&apos; when calling method: [wdIMouse::up]
+Command duration or timeout: 47 milliseconds
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;Herb&apos;, ip: &apos;192.168.2.29&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ac8f67db-0220-4e00-8693-909da553949a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:614)
+	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:32)
+	at org.openqa.selenium.remote.RemoteMouse.mouseUp(RemoteMouse.java:82)
+	at org.openqa.selenium.interactions.ButtonReleaseAction.perform(ButtonReleaseAction.java:40)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:31)
+	at com.d3.automation.D3BusinessLogic.submit(D3BusinessLogic.java:64)
+	at com.d3.automation.D3AutomationDemo.verifySecretQuestion(D3AutomationDemo.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.&apos;UnknownError: Cannot release a button when no button is pressed.&apos; when calling method: [wdIMouse::up]
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;Herb&apos;, ip: &apos;192.168.2.29&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: driver.version: unknown
+</pre></div></td>
+<td>0</td>
+<td>com.d3.automation.D3AutomationDemo@16a9952</td></tr>
+<tr>
+<td title='com.d3.automation.D3AutomationDemo.verifyValidLogin()'><b>verifyValidLogin</b><br>Test class: com.d3.automation.D3AutomationDemo</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.&apos;UnknownError: Cannot release a button when no button is pressed.&apos; when calling method: [wdIMouse::up]
+Command duration or timeout: 54 milliseconds
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;Herb&apos;, ip: &apos;192.168.2.29&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ac8f67db-0220-4e00-8693-909da553949a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:614)
+	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:32)
+	at org.openqa.selenium.remote.RemoteMouse.mouseUp(RemoteMouse.java:82)
+	at org.openqa.selenium.interactions.ButtonReleaseAction.perform(ButtonReleaseAction.java:40)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:31)
+	at com.d3.automation.D3BusinessLogic.submit(D3BusinessLogic.java:64)
+	at com.d3.automation.D3AutomationDemo.verifyValidLogin(D3AutomationDemo.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.&apos;UnknownError: Cannot release a button when no button is pressed.&apos; when calling method: [wdIMouse::up]
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;Herb&apos;, ip: &apos;192.168.2.29&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: driver.version: unknown
+</pre></div><a href='#' onClick='toggleBox("stack-trace24940596", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace24940596'><pre>org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.&apos;UnknownError: Cannot release a button when no button is pressed.&apos; when calling method: [wdIMouse::up]
+Command duration or timeout: 54 milliseconds
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;Herb&apos;, ip: &apos;192.168.2.29&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ac8f67db-0220-4e00-8693-909da553949a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:614)
+	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:32)
+	at org.openqa.selenium.remote.RemoteMouse.mouseUp(RemoteMouse.java:82)
+	at org.openqa.selenium.interactions.ButtonReleaseAction.perform(ButtonReleaseAction.java:40)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:31)
+	at com.d3.automation.D3BusinessLogic.submit(D3BusinessLogic.java:64)
+	at com.d3.automation.D3AutomationDemo.verifyValidLogin(D3AutomationDemo.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.WebDriverException: UnknownError: Cannot release a button when no button is pressed.&apos;UnknownError: Cannot release a button when no button is pressed.&apos; when calling method: [wdIMouse::up]
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;Herb&apos;, ip: &apos;192.168.2.29&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: driver.version: unknown
+</pre></div></td>
+<td>0</td>
+<td>com.d3.automation.D3AutomationDemo@16a9952</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -87,12 +407,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.d3.automation.D3AutomationDemo.verifyHomepageTitle()'><b>verifyHomepageTitle</b><br>Test class: com.d3.automation.D3AutomationDemo</td>
 <td></td>
-<td>0</td>
-<td>com.d3.automation.D3AutomationDemo@16a9952</td></tr>
-<tr>
-<td title='com.d3.automation.D3AutomationDemo.verifyInvalidLogin()'><b>verifyInvalidLogin</b><br>Test class: com.d3.automation.D3AutomationDemo</td>
-<td></td>
-<td>2</td>
+<td>1</td>
 <td>com.d3.automation.D3AutomationDemo@16a9952</td></tr>
 <tr>
 <td title='com.d3.automation.D3AutomationDemo.verifyMessagesButton()'><b>verifyMessagesButton</b><br>Test class: com.d3.automation.D3AutomationDemo</td>
@@ -107,15 +422,10 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.d3.automation.D3AutomationDemo.verifyPlanButton()'><b>verifyPlanButton</b><br>Test class: com.d3.automation.D3AutomationDemo</td>
 <td></td>
-<td>0</td>
+<td>1</td>
 <td>com.d3.automation.D3AutomationDemo@16a9952</td></tr>
 <tr>
 <td title='com.d3.automation.D3AutomationDemo.verifyPlanningButton()'><b>verifyPlanningButton</b><br>Test class: com.d3.automation.D3AutomationDemo</td>
-<td></td>
-<td>0</td>
-<td>com.d3.automation.D3AutomationDemo@16a9952</td></tr>
-<tr>
-<td title='com.d3.automation.D3AutomationDemo.verifySecretQuestion()'><b>verifySecretQuestion</b><br>Test class: com.d3.automation.D3AutomationDemo</td>
 <td></td>
 <td>0</td>
 <td>com.d3.automation.D3AutomationDemo@16a9952</td></tr>
@@ -126,11 +436,6 @@ function toggleAllBoxes() {
 <td>com.d3.automation.D3AutomationDemo@16a9952</td></tr>
 <tr>
 <td title='com.d3.automation.D3AutomationDemo.verifyTransactionsButton()'><b>verifyTransactionsButton</b><br>Test class: com.d3.automation.D3AutomationDemo</td>
-<td></td>
-<td>0</td>
-<td>com.d3.automation.D3AutomationDemo@16a9952</td></tr>
-<tr>
-<td title='com.d3.automation.D3AutomationDemo.verifyValidLogin()'><b>verifyValidLogin</b><br>Test class: com.d3.automation.D3AutomationDemo</td>
 <td></td>
 <td>0</td>
 <td>com.d3.automation.D3AutomationDemo@16a9952</td></tr>

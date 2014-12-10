@@ -42,11 +42,11 @@ public class D3AutomationDemo {
 //		driver = new InternetExplorerDriver();
 		
 //  FIREFOX  //
-		//driver = new FirefoxDriver();
+		driver = new FirefoxDriver();
 		
 //  CHROME  //
-		System.setProperty("webdriver.chrome.driver", "C:\\selenium-2.44.0\\chromedriver.exe");
-		driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "C:\\selenium-2.44.0\\chromedriver.exe");
+		//driver = new ChromeDriver();
 		
 		
 		driver.manage().window().maximize(); 
