@@ -23,8 +23,8 @@ public class D3PageMapping {
     
     public WebElement Password;
     
-    //@FindBy(how = How.CSS, using = "button.btn.btn-submit")
-    @FindBy(how = How.XPATH, using = "//*[@id='challenge-form']/div[2]/div[2]/button[2]")
+    @FindBy(how = How.CSS, using = "button.btn.btn-submit")
+    //@FindBy(how = How.XPATH, using = "//*[@id='challenge-form']/div[2]/div[2]/button[2]")
     
     public WebElement Submit;
     

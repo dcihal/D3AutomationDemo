@@ -59,9 +59,9 @@ public class D3BusinessLogic {
     public void submit(WebDriver driver)
     {
     wait.until(ExpectedConditions.visibilityOf(Mapping.Submit));	
-    //new Actions(driver).moveToElement(Mapping.Submit).click().perform();
-     	Actions builder = new Actions(driver); 
-        builder.click(Mapping.Submit).release().build().perform();
+    new Actions(driver).moveToElement(Mapping.Submit).click().perform();
+//     	Actions builder = new Actions(driver); 
+//        builder.click(Mapping.Submit).release().build().perform();
     }
     
     public void secretQuestion(WebDriver driver, String secretq)
