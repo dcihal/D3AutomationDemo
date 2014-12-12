@@ -6,6 +6,7 @@
 	<property name="src.dir.d3.automation" value=".\com\d3\automation"/>
 	<property name="src.dir.d3.testrails" value=".\com\d3\testrails"/>
 	<property name="src.dir.gurock.testrails" value=".\com\gurock\testrail"/>
+	<property name="src.dir.d3.utils" value=".\com\d3\utils"/>
 	<property name="libs.dir" value="..\libs"/>
     <property name="reports.dir" value="..\reports"/>
     <property name="conf.dir" value="..\conf"/>
@@ -55,6 +56,12 @@
  	    <src path="${src.dir.d3.testrails}"/>
  	      <classpath refid="cp"/>
  	 </javac>
+ 	
+	 <!-- compile the d3.utils directories --> 		
+	 <javac includeantruntime="false" destdir="${build.dir}" debug="on" deprecation="${javac.deprecation}" verbose="${javac.verbose}" failonerror="true"> 
+	    <src path="${src.dir.d3.utils}"/>
+	      <classpath refid="cp"/>
+	 </javac>
     	
      <!-- compile the d3.automation directories --> 		
      <javac includeantruntime="false" destdir="${build.dir}" debug="on" deprecation="${javac.deprecation}" verbose="${javac.verbose}" failonerror="true"> 
