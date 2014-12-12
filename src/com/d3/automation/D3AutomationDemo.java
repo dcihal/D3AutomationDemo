@@ -177,6 +177,13 @@ public class D3AutomationDemo {
  		}
         //System.out.print("Failed TestRun [" + TestRun + "] TestCase[" + TestCase + "]\n");
      }
+     
+//     public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+//    	 if (testResult.getStatus() == ITestResult.FAILURE) { 
+//    		 System.out.println(testResult.getStatus()); 
+//    		 File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
+//    		 FileUtils.copyFile(scrFile, new File("C:\\testScreenShot.jpg")); } 
+//     }
   }
 
    
