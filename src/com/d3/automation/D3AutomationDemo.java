@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -72,7 +74,7 @@ public class D3AutomationDemo {
 	   _aiTemp.submit(driver);
 	   WebDriverWait wait = new WebDriverWait(driver, 10);
 	   //wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//div[@class='user-alert']"), "Invalid User Credentials"));
-	   Utils.isTextPresent(driver, "Invalid");
+	   Utils.isTextPresent(driver, "Invalid1");
 
   }
   
@@ -177,14 +179,17 @@ public class D3AutomationDemo {
  		}
         //System.out.print("Failed TestRun [" + TestRun + "] TestCase[" + TestCase + "]\n");
      }
+  }  
      
-//     public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
-//    	 if (testResult.getStatus() == ITestResult.FAILURE) { 
-//    		 System.out.println(testResult.getStatus()); 
-//    		 File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
-//    		 FileUtils.copyFile(scrFile, new File("C:\\testScreenShot.jpg")); } 
-//     }
+  @AfterMethod
+  public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+    	 if (testResult.getStatus() == ITestResult.FAILURE) { 
+    		 System.out.println(testResult.getStatus()); 
+    		 File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
+    		 FileUtils.copyFile(scrFile, new File("C:\\Users\\Dan\\Desktop\\screenshots\\testResult.png")); 
+    		 } 
   }
+  
 
    
   @AfterTest
