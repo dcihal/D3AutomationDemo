@@ -32,14 +32,10 @@
  	<!-- delete files in directories -->
      <delete includeemptydirs="true" verbose="${javac.verbose}" failonerror="false">
        	<fileset dir="${build.dir}"/>
-       	<fileset dir="${reports.dir}"/>
      </delete>
 	
  	<!-- make directories if not present -->
-	  <mkdir dir="${build.dir}"/>
- 	  <mkdir dir="${reports.dir}"/>
-
-    
+	 <mkdir dir="${build.dir}"/> 
  </target>	
 		
 	
