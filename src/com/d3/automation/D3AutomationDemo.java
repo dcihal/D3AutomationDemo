@@ -2,8 +2,8 @@ package com.d3.automation;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Date;
 import java.util.concurrent.TimeUnit;
-
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 //import org.openqa.selenium.ie.InternetExplorerDriver;
 //import org.testng.Assert;
 import org.testng.annotations.*;
+import org.testng.IInvokedMethod;
 import org.testng.ITestResult;
 
 import com.d3.testrails.D3TestRails;
@@ -61,9 +62,7 @@ public class D3AutomationDemo {
   public void verifyHomepageTitle() {
 	   TestCase = "12";
 	   _aiTemp.veriyHomePage(driver);
-	  //String expectedTitle = "Welcome: Mercury Tours";
-		//String actualTitle = driver.getTitle();
-		//Assert.assertEquals(actualTitle, expectedTitle);
+//FIGURE OUT HOW TO PRINT OUT THE NAME OF THE TEST//////////////////////////////////////////////////////////////
   }
     
   @Test(priority = 2)
@@ -74,7 +73,7 @@ public class D3AutomationDemo {
 	   _aiTemp.submit(driver);
 	   WebDriverWait wait = new WebDriverWait(driver, 10);
 	   //wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//div[@class='user-alert']"), "Invalid User Credentials"));
-	   Utils.isTextPresent(driver, "Invalid1");
+	   Utils.isTextPresent(driver, "Invalid");
 
   }
   
@@ -93,6 +92,9 @@ public class D3AutomationDemo {
 	   TestCase = "13";
 	   _aiTemp.secretQuestion(driver, "denver");
 	   _aiTemp.submit(driver);
+	   Utils.isTextPresent(driver, "Last Login:");
+	   Utils.isTextPresent(driver, "Logout");	   
+	   Utils.isTextPresent(driver, "Samuel Adams III");
 	  //String expectedTitle = "Welcome: Mercury Tours";
 		//String actualTitle = driver.getTitle();
 		//Assert.assertEquals(actualTitle, expectedTitle);
@@ -102,6 +104,8 @@ public class D3AutomationDemo {
   public void verifyPlanButton() {
 	   TestCase = "14";
 	   _aiTemp.planButton(driver);
+	   Utils.isTextPresent(driver, "Cash Flow Trends");
+	   Utils.isTextPresent(driver, "Financial Goal Progress");	   
   }  
  
 //  @Test(priority = 6)
@@ -120,42 +124,56 @@ public class D3AutomationDemo {
   public void verifyMessagesButton() {
 	   TestCase = "15";
 	   _aiTemp.messagesButton(driver);
+	   Utils.isTextPresent(driver, "Messages: Notices");
   }  
   
   @Test(priority = 9)
   public void verifyAccountsButton() {
 	   TestCase = "16";
 	   _aiTemp.accountsButton(driver);
+	   Utils.isTextPresent(driver, "My Accounts");
+	   Utils.isTextPresent(driver, "Assets");
+	   Utils.isTextPresent(driver, "Liabilities");
   }  
  
   @Test(priority = 10)
   public void verifyTransactionsButton() {
 	   TestCase = "17";
 	   _aiTemp.transactionsButton(driver);
+	   Utils.isTextPresent(driver, "All Accounts");
   }  
  
   @Test(priority = 11)
   public void verifyMoneyMovementButton() {
 	   TestCase = "18";
 	   _aiTemp.moneyMovementButton(driver);
+	   Utils.isTextPresent(driver, "Money Movement: Schedule");
+	   Utils.isTextPresent(driver, "Payments & Transfers");
   }  
  
   @Test(priority = 12)
   public void verifyPlanningButton() {
 	   TestCase = "19";
 	   _aiTemp.planningButton(driver);
+	   Utils.isTextPresent(driver, "Planning: Budget");
+	   Utils.isTextPresent(driver, "Income Categories");
+	   Utils.isTextPresent(driver, "Expense Categories");
   }  
  
   @Test(priority = 13)
   public void verifyHelpButton() {
 	   TestCase = "20";
 	   _aiTemp.helpButton(driver);
+	   Utils.isTextPresent(driver, "Help: Frequently Asked Questions");
+	   Utils.isTextPresent(driver, "Customer Support:");
+	   Utils.isTextPresent(driver, "402-555-1234");
   }  
  
   @Test(priority = 14)
   public void verifySettingsButton() {
 	   TestCase = "21";
 	   _aiTemp.settingsButton(driver);
+	   Utils.isTextPresent(driver, "Settings: User Profile");
   }  
     
   @AfterMethod
@@ -183,10 +201,14 @@ public class D3AutomationDemo {
      
   @AfterMethod
   public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+	  
+		  Date date = new Date(System.currentTimeMillis());
+	      String dateString = date.toString();
+      
     	 if (testResult.getStatus() == ITestResult.FAILURE) { 
-    		 System.out.println(testResult.getStatus()); 
     		 File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
-    		 FileUtils.copyFile(scrFile, new File("C:\\Users\\Dan\\Desktop\\screenshots\\testResult.png")); 
+    		 //FileUtils.copyFile(scrFile, new File("C:\\Users\\Dan\\Desktop\\screenshots\\testResult.png")); 
+    		 FileUtils.copyFile(scrFile, new File("C:\\Users\\Dan\\Desktop\\screenshots\\" + testResult.getName()  + dateString + ".png")); 
     		 } 
   }
   
