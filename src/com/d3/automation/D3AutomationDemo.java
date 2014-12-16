@@ -173,7 +173,8 @@ public class D3AutomationDemo {
   public void verifySettingsButton() {
 	   TestCase = "21";
 	   _aiTemp.settingsButton(driver);
-	   Utils.isTextPresent(driver, "Settings: User Profile");
+	   Utils.isTextPresent(driver, "Settings:");
+	   Utils.isTextPresent(driver, "User Profile");
   }  
     
   @AfterMethod
