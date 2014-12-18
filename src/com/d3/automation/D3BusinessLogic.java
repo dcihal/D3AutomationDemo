@@ -71,6 +71,13 @@ public class D3BusinessLogic {
     Mapping.SecretQuestion.sendKeys(secretq);
 	}
     
+    
+    public void privateDevice(WebDriver driver)
+    {
+    wait.until(ExpectedConditions.visibilityOf(Mapping.Submit));
+    Mapping.PrivateDevice.click(); 
+    }
+    
     public void termsOfService(WebDriver driver)
     {
         if (Mapping.Terms.isDisplayed() == true){	

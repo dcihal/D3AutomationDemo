@@ -32,6 +32,10 @@ public class D3PageMapping {
     
     public WebElement SecretQuestion;
     
+    @FindBy(how = How.NAME, using = "isPrivate")
+    
+    public WebElement PrivateDevice;
+    
     @FindBy(how = How.CSS, using = "button.btn.flipper-button.manage-button")
 
     public WebElement Terms;

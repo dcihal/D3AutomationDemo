@@ -24,7 +24,7 @@ import com.gurock.testrail.APIException;
 
 
 public class D3AutomationDemo {
-	public String baseUrl = "http://fi1-qa4.dev.d3banking.com/";
+	public String baseUrl = "https://fi1-qa4.dev.d3banking.com/";
 	public WebDriver driver;
 	
 	String TestCase; 
@@ -91,6 +91,7 @@ public class D3AutomationDemo {
   public void verifySecretQuestion() {
 	   TestCase = "13";
 	   _aiTemp.secretQuestion(driver, "denver");
+	   _aiTemp.privateDevice(driver);
 	   _aiTemp.submit(driver);
 	   Utils.isTextPresent(driver, "Last Login:");
 	   Utils.isTextPresent(driver, "Logout");	   
