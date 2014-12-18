@@ -24,7 +24,7 @@ import com.gurock.testrail.APIException;
 
 
 public class D3AutomationDemo {
-	public String baseUrl = "https://fi1-qa4.dev.d3banking.com/";
+	public String baseUrl = "http://fi1-qa4.dev.d3banking.com/";
 	public WebDriver driver;
 	
 	String TestCase; 
@@ -62,7 +62,7 @@ public class D3AutomationDemo {
   public void verifyHomepageTitle() {
 	   TestCase = "12";
 	   _aiTemp.veriyHomePage(driver);
-//FIGURE OUT HOW TO PRINT OUT THE NAME OF THE TEST//////////////////////////////////////////////////////////////
+
   }
     
   @Test(priority = 2)
@@ -100,7 +100,14 @@ public class D3AutomationDemo {
 		//Assert.assertEquals(actualTitle, expectedTitle);
   }
   
-  @Test(priority = 5)
+//  @Test(priority = 5)
+//  public void termsOfService() {
+//	   //TestCase = "";
+//	  _aiTemp.termsOfService(driver);
+//	  _aiTemp.submit(driver);
+//  }
+  
+  @Test(priority = 6)
   public void verifyPlanButton() {
 	   TestCase = "14";
 	   _aiTemp.planButton(driver);
@@ -108,26 +115,26 @@ public class D3AutomationDemo {
 	   Utils.isTextPresent(driver, "Financial Goal Progress");	   
   }  
  
-//  @Test(priority = 6)
+//  @Test(priority = 7)
 //  public void verifyCreateBudget() {
 //  TestCase = "6";
 //	   _aiTemp.createBudget(driver);
 //  }
 // 
-//  @Test(priority = 7)
+//  @Test(priority = 8)
 //  public void verifyManageButton() {
 //  TestCase = "7";
 //	   _aiTemp.manageButton(driver);
 //  }
 
-  @Test(priority = 8)
+  @Test(priority = 9)
   public void verifyMessagesButton() {
 	   TestCase = "15";
 	   _aiTemp.messagesButton(driver);
 	   Utils.isTextPresent(driver, "Messages: Notices");
   }  
   
-  @Test(priority = 9)
+  @Test(priority = 10)
   public void verifyAccountsButton() {
 	   TestCase = "16";
 	   _aiTemp.accountsButton(driver);
@@ -136,14 +143,14 @@ public class D3AutomationDemo {
 	   Utils.isTextPresent(driver, "Liabilities");
   }  
  
-  @Test(priority = 10)
+  @Test(priority = 11)
   public void verifyTransactionsButton() {
 	   TestCase = "17";
 	   _aiTemp.transactionsButton(driver);
 	   Utils.isTextPresent(driver, "All Accounts");
   }  
  
-  @Test(priority = 11)
+  @Test(priority = 12)
   public void verifyMoneyMovementButton() {
 	   TestCase = "18";
 	   _aiTemp.moneyMovementButton(driver);
@@ -151,7 +158,7 @@ public class D3AutomationDemo {
 	   Utils.isTextPresent(driver, "Payments & Transfers");
   }  
  
-  @Test(priority = 12)
+  @Test(priority = 13)
   public void verifyPlanningButton() {
 	   TestCase = "19";
 	   _aiTemp.planningButton(driver);
@@ -160,7 +167,7 @@ public class D3AutomationDemo {
 	   Utils.isTextPresent(driver, "Expense Categories");
   }  
  
-  @Test(priority = 13)
+  @Test(priority = 14)
   public void verifyHelpButton() {
 	   TestCase = "20";
 	   _aiTemp.helpButton(driver);
@@ -169,7 +176,7 @@ public class D3AutomationDemo {
 	   Utils.isTextPresent(driver, "402-555-1234");
   }  
  
-  @Test(priority = 14)
+  @Test(priority = 15)
   public void verifySettingsButton() {
 	   TestCase = "21";
 	   _aiTemp.settingsButton(driver);

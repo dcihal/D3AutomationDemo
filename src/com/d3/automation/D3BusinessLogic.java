@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.TestListenerAdapter;
+import org.openqa.selenium.Keys;
 
 
 public class D3BusinessLogic {
@@ -69,6 +70,13 @@ public class D3BusinessLogic {
     wait.until(ExpectedConditions.visibilityOf(Mapping.SecretQuestion));	
     Mapping.SecretQuestion.sendKeys(secretq);
 	}
+    
+    public void termsOfService(WebDriver driver)
+    {
+        if (Mapping.Terms.isDisplayed() == true){	
+        	new Actions(driver).moveToElement(Mapping.Terms).sendKeys(Keys.SPACE);
+        }
+    }
     
     public void planButton(WebDriver driver)
     {

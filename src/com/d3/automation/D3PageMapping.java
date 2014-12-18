@@ -33,6 +33,10 @@ public class D3PageMapping {
     public WebElement SecretQuestion;
     
     @FindBy(how = How.CSS, using = "button.btn.flipper-button.manage-button")
+
+    public WebElement Terms;
+    
+    @FindBy(how = How.ID, using = "tosAccept")
     
     public WebElement Manage;
 	
