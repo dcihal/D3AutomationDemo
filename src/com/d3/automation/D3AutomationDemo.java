@@ -36,6 +36,7 @@ public class D3AutomationDemo {
 	D3BusinessLogic _aiTemp = new D3BusinessLogic();
 	D3TestRails d3testrails = new D3TestRails();
 	Utils utils = new Utils();
+   	Properties p = Utils.loadProperties();
 	
 	@BeforeTest
 	public void launchBrowser()
@@ -56,21 +57,19 @@ public class D3AutomationDemo {
 		driver.manage().window().maximize(); 
 		driver.get(baseUrl);
 		_aiTemp.init(driver);
-		d3testrails.InitRail("https://lodo.testrail.com/", "dcihal@d3banking.com", "D3B@nk!ng");
+		d3testrails.InitRail(p.getProperty("testRailUrl"), p.getProperty("testRailUserName"), p.getProperty("testRailPassWord"));
   }
 			
   @Test(priority = 1)
   public void verifyHomepageTitle() {
 	   TestCase = "12";
 	   _aiTemp.veriyHomePage(driver);
-	   	Properties p = Utils.loadProperties();
-	   	System.out.println(p.getProperty("userName"));
   }
     
   @Test(priority = 2)
   public void verifyInvalidLogin() {
 	   TestCase = "1";
-	   _aiTemp.loginUn(driver, "samueladamsiii");
+	   _aiTemp.loginUn(driver, p.getProperty("userName"));
 	   _aiTemp.loginPw(driver, "xxxxxx");
 	   _aiTemp.submit(driver);
 	   WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -84,8 +83,8 @@ public class D3AutomationDemo {
 	   TestCase = "2";
 	   driver.findElement(By.name("user-name")).clear();
 	   driver.findElement(By.name("password")).clear();
-	   _aiTemp.loginUn(driver, "samueladamsiii");
-	   _aiTemp.loginPw(driver, "password");
+	   _aiTemp.loginUn(driver, p.getProperty("userName"));
+	   _aiTemp.loginPw(driver, p.getProperty("passWord"));
 	   _aiTemp.submit(driver);
   }
   
