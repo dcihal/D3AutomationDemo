@@ -136,7 +136,7 @@ public final class Utils  {
 		FileInputStream file = null;
 		try 
 		{
-			file = new FileInputStream("C:\\Users\\Dan\\Documents\\d3Automation.properties");
+			file = new FileInputStream("C:\\Users\\Dan\\git\\D3AutomationDemo\\conf\\properties.properties");
 			
 		} 
 		catch (FileNotFoundException e) {
