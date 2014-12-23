@@ -70,12 +70,11 @@ public class D3BusinessLogic {
     wait.until(ExpectedConditions.visibilityOf(Mapping.SecretQuestion));	
     Mapping.SecretQuestion.sendKeys(secretq);
 	}
-    
-    
+        
     public void privateDevice(WebDriver driver)
     {
     wait.until(ExpectedConditions.visibilityOf(Mapping.Submit));
-    Mapping.PrivateDevice.click(); 
+    Mapping.PrivateDevice.click();
     }
     
     public void termsOfService(WebDriver driver)
@@ -153,6 +152,7 @@ public class D3BusinessLogic {
     wait.until(ExpectedConditions.visibilityOf(Mapping.Settings));	
     Mapping.Settings.click(); 
 	}
+
 
 }
 

@@ -136,7 +136,7 @@ public final class Utils  {
 		FileInputStream file = null;
 		try 
 		{
-			file = new FileInputStream("..\\conf\\crusadeAutomation.properties");
+			file = new FileInputStream("C:\\Users\\Dan\\Documents\\d3Automation.properties");
 			
 		} 
 		catch (FileNotFoundException e) {
@@ -258,6 +258,7 @@ public final class Utils  {
 	    FIREFOX, IE, CHROME
 	}
 	
+
     
 }
 

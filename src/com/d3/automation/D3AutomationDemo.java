@@ -3,6 +3,7 @@ package com.d3.automation;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Date;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -62,7 +63,8 @@ public class D3AutomationDemo {
   public void verifyHomepageTitle() {
 	   TestCase = "12";
 	   _aiTemp.veriyHomePage(driver);
-
+	   	Properties p = Utils.loadProperties();
+	   	System.out.println(p.getProperty("userName"));
   }
     
   @Test(priority = 2)
