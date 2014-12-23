@@ -36,7 +36,7 @@ public class D3AutomationDemo {
 	D3BusinessLogic _aiTemp = new D3BusinessLogic();
 	D3TestRails d3testrails = new D3TestRails();
 	Utils utils = new Utils();
-   	Properties p = Utils.loadProperties();
+   	Properties p = Utils.loadProperties("..\\conf\\properties.properties");
 	
 	@BeforeTest
 	public void launchBrowser()

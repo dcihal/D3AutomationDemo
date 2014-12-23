@@ -1,4 +1,6 @@
 package com.d3.automation;
+import java.util.Properties;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.*;
@@ -9,22 +11,29 @@ import org.testng.Assert;
 import org.testng.TestListenerAdapter;
 import org.openqa.selenium.Keys;
 
+import com.d3.utils.Utils;
+
 
 public class D3BusinessLogic {
 	
     public WebDriver Driver;
-    public long TimeToWait = 15;
+    public String TimeToWait; 
 //public TimeSpan TimeToWait = TimeSpan.FromSeconds(30);
     public D3PageMapping Mapping;
     public WebDriverWait wait;
+    
+    Utils utils = new Utils();
+   	Properties p = Utils.loadProperties("..\\conf\\properties.properties");
 
     
     public void init(WebDriver driver)
     {
+    	TimeToWait = p.getProperty("timeOut");
+       	Long timeout = Long.valueOf(TimeToWait);
       	Mapping = new D3PageMapping(driver);
         PageFactory.initElements(driver, Mapping);
         Driver = driver;
-        wait = new WebDriverWait(driver, TimeToWait);
+        wait = new WebDriverWait(driver, timeout);
     	
     }
     

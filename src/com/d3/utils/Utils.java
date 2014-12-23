@@ -129,14 +129,14 @@ public final class Utils  {
     
     //call with Properties p = Utils.loadProperties();
     //then p.getProperty("username")
-    public static Properties loadProperties()
+    public static Properties loadProperties(String fileLocation)
     {
     	Properties listProperties = new Properties();
 		
 		FileInputStream file = null;
 		try 
 		{
-			file = new FileInputStream("C:\\Users\\Dan\\git\\D3AutomationDemo\\conf\\properties.properties");
+			file = new FileInputStream(fileLocation);
 			
 		} 
 		catch (FileNotFoundException e) {
