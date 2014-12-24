@@ -1,51 +1,5 @@
 <suite name="D3AutomationDemo Tests" verbose="2">
-<parameter name="NimblevoxUser" value="QAAutomation2" />
-<parameter name="NimblevoxPass" value="super" />
-<parameter name="WebdriverTimeout" value="30" />
-
-<parameter name="TestAppName" value="testapp.txt" />
-
-<parameter name="promptNode" value= "1" />
-<parameter name="recordNode" value= "2" />
-<parameter name="playToneNode" value= "3" />
-<parameter name="dTMFNode" value= "4" />
-<parameter name="customVXMLNode" value= "5" />
-<parameter name="aMDNode" value= "6" />
-<parameter name="assignNode" value = "7" />
-<parameter name="switchNode" value = "8" />
-<parameter name="conditionNode" value = "9" /> 
-<parameter name="incrementNode" value = "10" />
-<parameter name="mathNode" value = "11" />
-<parameter name="dateNode" value = "12" />
-<parameter name="stringNode" value = "13" />
-<parameter name="timerNode" value = "14" />
-<parameter name="jScriptNode" value = "15" />
-<parameter name="serviceNode" value = "16" />
-<parameter name="inCallNode" value = "17" />
-<parameter name="outdialNode" value = "18" />
-<parameter name="joinNode" value = "19" />
-<parameter name="unjoinNode" value = "20" />
-<parameter name="confNode" value = "21" />
-<parameter name="disconnectNode" value = "22" />
-<parameter name="emailNode" value = "23" />
-<parameter name="hTTPNode" value = "24" />
-<parameter name="sendNode" value = "25" />
-<parameter name="receiveNode" value = "26" />
-<parameter name="billingNode" value = "27" />
-<parameter name="commentNodeC" value = "28" />
-<parameter name="goToNodeC" value = "29" />
-<parameter name="targetNodeC" value = "30" /> 
-<parameter name="logNodeC" value = "31" /> 
-<parameter name="forkNodeC" value = "32" />
-<parameter name="endNodeC" value = "33" />    	
-<parameter name="modeC" value = "1" />
-<parameter name="commentNodeS" value = "27" />
-<parameter name="goToNodeS" value = "28" />
-<parameter name="targetNodeS" value = "29" />
-<parameter name="logNodeS" value = "30" /> 
-<parameter name="forkNodeS" value = "31" /> 
-<parameter name="endNodeS" value = "32" />   	
-<parameter name="modeS" value = "0" />
+<parameter name="browse" value="CHROME" />
 
 
 <test name="D3AutomationDemo Test Classes">
