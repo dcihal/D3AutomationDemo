@@ -4,10 +4,12 @@ import java.io.File;
 import java.io.IOException;
 import java.sql.Date;
 import java.util.Properties;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.testng.annotations.*;
 import org.testng.ITestResult;
+
 import com.d3.testrails.D3TestRails;
 import com.d3.utils.*;
 import com.d3.utils.Utils.BrowserType;
@@ -23,12 +25,13 @@ public class D3AutomationDemo {
 	D3BusinessLogic bl = new D3BusinessLogic();
 	D3TestRails d3testrails = new D3TestRails();
 	Utils utils = new Utils();
-   	Properties p = Utils.loadProperties(".\\conf\\properties.properties");            
+   	//Properties p = Utils.loadProperties(".\\conf\\properties.properties");            
+	private String userName;
 
 
 	@BeforeTest
 	@Parameters({"browse", "WebdriverTimeout", "baseurl"})
-	public void launchBrowser(String browse, String WebdriverTimeout, String baseurl)
+	public void launchBrowser(@Optional("FIREFOX") String browse, String WebdriverTimeout, String baseurl)
 	{
     	switch (browse)
     	{
