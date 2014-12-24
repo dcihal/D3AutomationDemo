@@ -4,21 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.sql.Date;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-//import org.openqa.selenium.ie.InternetExplorerDriver;
-//import org.testng.Assert;
 import org.testng.annotations.*;
-import org.testng.IInvokedMethod;
 import org.testng.ITestResult;
-
 import com.d3.testrails.D3TestRails;
 import com.d3.utils.*;
 import com.d3.utils.Utils.BrowserType;
@@ -26,10 +15,9 @@ import com.gurock.testrail.APIException;
 
 
 public class D3AutomationDemo {
-	public String baseUrl = "https://fi1-qa4.dev.d3banking.com/";
+
 	public WebDriver driver;
 	private BrowserType browser;
-	
 	String TestCase; 
 	String TestRun = "1"; 
 	D3BusinessLogic bl = new D3BusinessLogic();
@@ -39,8 +27,8 @@ public class D3AutomationDemo {
 
 
 	@BeforeTest
-	@Parameters({"browse", "WebdriverTimeout"})
-	public void launchBrowser(String browse, String WebdriverTimeout)
+	@Parameters({"browse", "WebdriverTimeout", "baseurl"})
+	public void launchBrowser(String browse, String WebdriverTimeout, String baseurl)
 	{
     	switch (browse)
     	{
@@ -64,12 +52,19 @@ public class D3AutomationDemo {
     	Long timeout = Long.valueOf(WebdriverTimeout);
         driver = Utils.getWebDriver(browser, timeout); 
 		
-		driver.get(baseUrl);
+		driver.get(baseurl);
+		bl.init(driver, timeout);
 
-	   	bl.init(driver, timeout);
-		d3testrails.InitRail(p.getProperty("testRailUrl"), p.getProperty("testRailUserName"), p.getProperty("testRailPassWord"));
-  }
-			
+	}
+	
+	@BeforeTest
+	@Parameters({"testRailUrl", "testRailUserName", "testRailPassWord"})
+	public void initTestRails(String testRailUrl, String testRailUserName, String testRailPassWord)
+	{	
+		d3testrails.InitRail(testRailUrl, testRailUserName, testRailPassWord);
+	}
+	
+	
   @Test(priority = 1)
   public void verifyHomepageTitle() {
 	   TestCase = "12";
@@ -77,31 +72,37 @@ public class D3AutomationDemo {
   }
     
   @Test(priority = 2)
-  public void verifyInvalidLogin() {
+  @Parameters({"userName"})
+  public void verifyInvalidLogin(String userName) 
+  {
 	   TestCase = "1";
-	   bl.loginUn(driver, p.getProperty("userName"));
+	   bl.loginUn(driver, userName);
 	   bl.loginPw(driver, "xxxxxx");
 	   bl.submit(driver);
-	   WebDriverWait wait = new WebDriverWait(driver, 10);
+	   //WebDriverWait wait = new WebDriverWait(driver, 10);
 	   //wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//div[@class='user-alert']"), "Invalid User Credentials"));
 	   Utils.isTextPresent(driver, "Invalid");
 
   }
   
   @Test(priority = 3)
-  public void verifyValidLogin() {
+  @Parameters({"userName", "passWord"})
+  public void verifyValidLogin(String userName, String passWord) 
+  {
 	   TestCase = "2";
 	   driver.findElement(By.name("user-name")).clear();
 	   driver.findElement(By.name("password")).clear();
-	   bl.loginUn(driver, p.getProperty("userName"));
-	   bl.loginPw(driver, p.getProperty("passWord"));
+	   bl.loginUn(driver, userName);
+	   bl.loginPw(driver, passWord);
 	   bl.submit(driver);
   }
   
   @Test(priority = 4)
-  public void verifySecretQuestion() {
+  @Parameters({"secretQuestion"})
+  public void verifySecretQuestion(String secretQuestion) 
+  {
 	   TestCase = "13";
-	   bl.secretQuestion(driver, "denver");
+	   bl.secretQuestion(driver, secretQuestion);
 	   bl.privateDevice(driver);
 	   bl.submit(driver);
 	   Utils.isTextPresent(driver, "Last Login:");
@@ -120,7 +121,8 @@ public class D3AutomationDemo {
 //  }
   
   @Test(priority = 6)
-  public void verifyPlanButton() {
+  public void verifyPlanButton() 
+  {
 	   TestCase = "14";
 	   bl.planButton(driver);
 	   Utils.isTextPresent(driver, "Cash Flow Trends");
@@ -140,14 +142,16 @@ public class D3AutomationDemo {
 //  }
 
   @Test(priority = 9)
-  public void verifyMessagesButton() {
+  public void verifyMessagesButton() 
+  {
 	   TestCase = "15";
 	   bl.messagesButton(driver);
 	   Utils.isTextPresent(driver, "Messages: Notices");
   }  
   
   @Test(priority = 10)
-  public void verifyAccountsButton() {
+  public void verifyAccountsButton() 
+  {
 	   TestCase = "16";
 	   bl.accountsButton(driver);
 	   Utils.isTextPresent(driver, "My Accounts");
@@ -156,14 +160,16 @@ public class D3AutomationDemo {
   }  
  
   @Test(priority = 11)
-  public void verifyTransactionsButton() {
+  public void verifyTransactionsButton() 
+  {
 	   TestCase = "17";
 	   bl.transactionsButton(driver);
 	   Utils.isTextPresent(driver, "All Accounts");
   }  
  
   @Test(priority = 12)
-  public void verifyMoneyMovementButton() {
+  public void verifyMoneyMovementButton() 
+  {
 	   TestCase = "18";
 	   bl.moneyMovementButton(driver);
 	   Utils.isTextPresent(driver, "Money Movement: Schedule");
@@ -171,7 +177,8 @@ public class D3AutomationDemo {
   }  
  
   @Test(priority = 13)
-  public void verifyPlanningButton() {
+  public void verifyPlanningButton() 
+  {
 	   TestCase = "19";
 	   bl.planningButton(driver);
 	   Utils.isTextPresent(driver, "Planning: Budget");
@@ -180,7 +187,8 @@ public class D3AutomationDemo {
   }  
  
   @Test(priority = 14)
-  public void verifyHelpButton() {
+  public void verifyHelpButton() 
+  {
 	   TestCase = "20";
 	   bl.helpButton(driver);
 	   Utils.isTextPresent(driver, "Help: Frequently Asked Questions");
@@ -189,7 +197,8 @@ public class D3AutomationDemo {
   }  
  
   @Test(priority = 15)
-  public void verifySettingsButton() {
+  public void verifySettingsButton() 
+  {
 	   TestCase = "21";
 	   bl.settingsButton(driver);
 	   Utils.isTextPresent(driver, "Settings:");
@@ -197,7 +206,8 @@ public class D3AutomationDemo {
   }  
     
   @AfterMethod
-  public void updateTestRails(ITestResult result) {
+  public void updateTestRails(ITestResult result) 
+  {
      if (result.getStatus() == ITestResult.SUCCESS) {
         try {
 			d3testrails.Passed(TestRun, TestCase, "It worked!");
@@ -220,7 +230,8 @@ public class D3AutomationDemo {
   }  
      
   @AfterMethod
-  public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+  public void takeScreenShotOnFailure(ITestResult testResult) throws IOException 
+  {
 	  
 		  Date date = new Date(System.currentTimeMillis());
 	      String dateString = date.toString();
@@ -234,7 +245,8 @@ public class D3AutomationDemo {
 
    
   @AfterTest
-  public void terminateBrowser(){
+  public void terminateBrowser()
+  {
 	  driver.quit();
   }
   

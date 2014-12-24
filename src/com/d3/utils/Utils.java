@@ -29,14 +29,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.gurock.testrail.APIClient;
-import com.gurock.testrail.APIException;
-
-import java.util.Map;
-import java.util.HashMap;
-
-import org.json.simple.JSONObject;
- 
 
 public final class Utils  {
 	// onstructor Called
@@ -132,7 +124,7 @@ public final class Utils  {
     public static Properties loadProperties(String filePath)
     {
     	Properties listProperties = new Properties();
-		System.out.println(filePath);
+		//System.out.println(filePath);
 
 		FileInputStream file = null;
 		try 
