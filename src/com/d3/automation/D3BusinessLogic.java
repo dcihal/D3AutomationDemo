@@ -18,18 +18,17 @@ public class D3BusinessLogic {
 	
     public WebDriver Driver;
     public String TimeToWait; 
-//public TimeSpan TimeToWait = TimeSpan.FromSeconds(30);
     public D3PageMapping Mapping;
     public WebDriverWait wait;
     
     Utils utils = new Utils();
-   	Properties p = Utils.loadProperties("..\\conf\\properties.properties");
-
+   	Properties p = Utils.loadProperties(".\\conf\\properties.properties");
+	String webdriverTimeout = p.getProperty("WebdriverTimeout");
+	Long timeout = Long.valueOf(webdriverTimeout);
     
-    public void init(WebDriver driver)
+    public void init(WebDriver driver, Long timeout)
     {
-    	TimeToWait = p.getProperty("timeOut");
-       	Long timeout = Long.valueOf(TimeToWait);
+
       	Mapping = new D3PageMapping(driver);
         PageFactory.initElements(driver, Mapping);
         Driver = driver;

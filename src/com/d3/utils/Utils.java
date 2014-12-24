@@ -129,14 +129,15 @@ public final class Utils  {
     
     //call with Properties p = Utils.loadProperties();
     //then p.getProperty("username")
-    public static Properties loadProperties(String fileLocation)
+    public static Properties loadProperties(String filePath)
     {
     	Properties listProperties = new Properties();
-		
+		System.out.println(filePath);
+
 		FileInputStream file = null;
 		try 
 		{
-			file = new FileInputStream(fileLocation);
+			file = new FileInputStream(filePath);
 			
 		} 
 		catch (FileNotFoundException e) {

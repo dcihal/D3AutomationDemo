@@ -20,7 +20,7 @@ import org.testng.IInvokedMethod;
 import org.testng.ITestResult;
 
 import com.d3.testrails.D3TestRails;
-import com.d3.utils.Utils;
+import com.d3.utils.*;
 import com.gurock.testrail.APIException;
 
 
@@ -30,17 +30,17 @@ public class D3AutomationDemo {
 	
 	String TestCase; 
 	String TestRun = "1"; 
-	             
-
-	//AITemplate _aiTemp;
-	D3BusinessLogic _aiTemp = new D3BusinessLogic();
+	D3BusinessLogic bl = new D3BusinessLogic();
 	D3TestRails d3testrails = new D3TestRails();
 	Utils utils = new Utils();
-   	Properties p = Utils.loadProperties("..\\conf\\properties.properties");
-	
+   	Properties p = Utils.loadProperties(".\\conf\\properties.properties");            
+
+
 	@BeforeTest
 	public void launchBrowser()
 	{
+
+
 //	IE	//
 //		File file = new File("C:\\Users\\Dan\\workspace\\IEDriverServer.exe");
 //		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
@@ -56,22 +56,24 @@ public class D3AutomationDemo {
 		
 		driver.manage().window().maximize(); 
 		driver.get(baseUrl);
-		_aiTemp.init(driver);
+		String webdriverTimeout = p.getProperty("WebdriverTimeout");
+	   	Long timeout = Long.valueOf(webdriverTimeout);
+	   	bl.init(driver, timeout);
 		d3testrails.InitRail(p.getProperty("testRailUrl"), p.getProperty("testRailUserName"), p.getProperty("testRailPassWord"));
   }
 			
   @Test(priority = 1)
   public void verifyHomepageTitle() {
 	   TestCase = "12";
-	   _aiTemp.veriyHomePage(driver);
+	   bl.veriyHomePage(driver);
   }
     
   @Test(priority = 2)
   public void verifyInvalidLogin() {
 	   TestCase = "1";
-	   _aiTemp.loginUn(driver, p.getProperty("userName"));
-	   _aiTemp.loginPw(driver, "xxxxxx");
-	   _aiTemp.submit(driver);
+	   bl.loginUn(driver, p.getProperty("userName"));
+	   bl.loginPw(driver, "xxxxxx");
+	   bl.submit(driver);
 	   WebDriverWait wait = new WebDriverWait(driver, 10);
 	   //wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//div[@class='user-alert']"), "Invalid User Credentials"));
 	   Utils.isTextPresent(driver, "Invalid");
@@ -83,17 +85,17 @@ public class D3AutomationDemo {
 	   TestCase = "2";
 	   driver.findElement(By.name("user-name")).clear();
 	   driver.findElement(By.name("password")).clear();
-	   _aiTemp.loginUn(driver, p.getProperty("userName"));
-	   _aiTemp.loginPw(driver, p.getProperty("passWord"));
-	   _aiTemp.submit(driver);
+	   bl.loginUn(driver, p.getProperty("userName"));
+	   bl.loginPw(driver, p.getProperty("passWord"));
+	   bl.submit(driver);
   }
   
   @Test(priority = 4)
   public void verifySecretQuestion() {
 	   TestCase = "13";
-	   _aiTemp.secretQuestion(driver, "denver");
-	   _aiTemp.privateDevice(driver);
-	   _aiTemp.submit(driver);
+	   bl.secretQuestion(driver, "denver");
+	   bl.privateDevice(driver);
+	   bl.submit(driver);
 	   Utils.isTextPresent(driver, "Last Login:");
 	   Utils.isTextPresent(driver, "Logout");	   
 	   Utils.isTextPresent(driver, "Samuel Adams III");
@@ -112,7 +114,7 @@ public class D3AutomationDemo {
   @Test(priority = 6)
   public void verifyPlanButton() {
 	   TestCase = "14";
-	   _aiTemp.planButton(driver);
+	   bl.planButton(driver);
 	   Utils.isTextPresent(driver, "Cash Flow Trends");
 	   Utils.isTextPresent(driver, "Financial Goal Progress");	   
   }  
@@ -132,14 +134,14 @@ public class D3AutomationDemo {
   @Test(priority = 9)
   public void verifyMessagesButton() {
 	   TestCase = "15";
-	   _aiTemp.messagesButton(driver);
+	   bl.messagesButton(driver);
 	   Utils.isTextPresent(driver, "Messages: Notices");
   }  
   
   @Test(priority = 10)
   public void verifyAccountsButton() {
 	   TestCase = "16";
-	   _aiTemp.accountsButton(driver);
+	   bl.accountsButton(driver);
 	   Utils.isTextPresent(driver, "My Accounts");
 	   Utils.isTextPresent(driver, "Assets");
 	   Utils.isTextPresent(driver, "Liabilities");
@@ -148,14 +150,14 @@ public class D3AutomationDemo {
   @Test(priority = 11)
   public void verifyTransactionsButton() {
 	   TestCase = "17";
-	   _aiTemp.transactionsButton(driver);
+	   bl.transactionsButton(driver);
 	   Utils.isTextPresent(driver, "All Accounts");
   }  
  
   @Test(priority = 12)
   public void verifyMoneyMovementButton() {
 	   TestCase = "18";
-	   _aiTemp.moneyMovementButton(driver);
+	   bl.moneyMovementButton(driver);
 	   Utils.isTextPresent(driver, "Money Movement: Schedule");
 	   Utils.isTextPresent(driver, "Payments & Transfers");
   }  
@@ -163,7 +165,7 @@ public class D3AutomationDemo {
   @Test(priority = 13)
   public void verifyPlanningButton() {
 	   TestCase = "19";
-	   _aiTemp.planningButton(driver);
+	   bl.planningButton(driver);
 	   Utils.isTextPresent(driver, "Planning: Budget");
 	   Utils.isTextPresent(driver, "Income Categories");
 	   Utils.isTextPresent(driver, "Expense Categories");
@@ -172,7 +174,7 @@ public class D3AutomationDemo {
   @Test(priority = 14)
   public void verifyHelpButton() {
 	   TestCase = "20";
-	   _aiTemp.helpButton(driver);
+	   bl.helpButton(driver);
 	   Utils.isTextPresent(driver, "Help: Frequently Asked Questions");
 	   Utils.isTextPresent(driver, "Customer Support:");
 	   Utils.isTextPresent(driver, "402-555-1234");
@@ -181,7 +183,7 @@ public class D3AutomationDemo {
   @Test(priority = 15)
   public void verifySettingsButton() {
 	   TestCase = "21";
-	   _aiTemp.settingsButton(driver);
+	   bl.settingsButton(driver);
 	   Utils.isTextPresent(driver, "Settings:");
 	   Utils.isTextPresent(driver, "User Profile");
   }  
