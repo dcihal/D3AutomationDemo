@@ -21,12 +21,14 @@ import org.testng.ITestResult;
 
 import com.d3.testrails.D3TestRails;
 import com.d3.utils.*;
+import com.d3.utils.Utils.BrowserType;
 import com.gurock.testrail.APIException;
 
 
 public class D3AutomationDemo {
 	public String baseUrl = "https://fi1-qa4.dev.d3banking.com/";
 	public WebDriver driver;
+	private BrowserType browser;
 	
 	String TestCase; 
 	String TestRun = "1"; 
@@ -37,28 +39,34 @@ public class D3AutomationDemo {
 
 
 	@BeforeTest
-	public void launchBrowser()
+	@Parameters({"browse"})
+	public void launchBrowser(String browse)
 	{
+    	switch (browse)
+    	{
+    	    case "FIREFOX": 
+    	    	browser = Utils.BrowserType.FIREFOX;
+            	break;
+    	    case "IE":
+    	    	browser = Utils.BrowserType.IE;
+            	break;
+            case "CHROME":
+            	browser = Utils.BrowserType.CHROME;
+            	break;
+            default:
+            	browser = Utils.BrowserType.FIREFOX;
+            	break;
+            	
 
-
-//	IE	//
-//		File file = new File("C:\\Users\\Dan\\workspace\\IEDriverServer.exe");
-//		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
-//		driver = new InternetExplorerDriver();
+    	}
+    	
+        String webdriverTimeout = p.getProperty("WebdriverTimeout");
+    	Long timeout = Long.valueOf(webdriverTimeout);
+        driver = Utils.getWebDriver(browser, webdriverTimeout); 
 		
-//  FIREFOX  //
-		driver = new FirefoxDriver();
-		
-//  CHROME  //
-//		System.setProperty("webdriver.chrome.driver", "C:\\selenium-2.44.0\\chromedriver.exe");
-//		driver = new ChromeDriver();
-		
-		
-		driver.manage().window().maximize(); 
 		driver.get(baseUrl);
-		String webdriverTimeout = p.getProperty("WebdriverTimeout");
-	   	Long timeout = Long.valueOf(webdriverTimeout);
-	   	bl.init(driver, timeout);
+
+	   	bl.init(driver, webdriverTimeout);
 		d3testrails.InitRail(p.getProperty("testRailUrl"), p.getProperty("testRailUserName"), p.getProperty("testRailPassWord"));
   }
 			

@@ -21,10 +21,10 @@ public class D3BusinessLogic {
     public D3PageMapping Mapping;
     public WebDriverWait wait;
     
-    Utils utils = new Utils();
-   	Properties p = Utils.loadProperties(".\\conf\\properties.properties");
-	String webdriverTimeout = p.getProperty("WebdriverTimeout");
-	Long timeout = Long.valueOf(webdriverTimeout);
+    //Utils utils = new Utils();
+   	//Properties p = Utils.loadProperties(".\\conf\\properties.properties");
+	//String webdriverTimeout = p.getProperty("WebdriverTimeout");
+	//Long timeout = Long.valueOf(webdriverTimeout);
     
     public void init(WebDriver driver, Long timeout)
     {

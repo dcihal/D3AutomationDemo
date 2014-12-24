@@ -2,14 +2,14 @@
 
 <project name="D3AutomationDemo" basedir=".">
 
-	<property name="build.dir" value="..\build"/>
-	<property name="src.dir.d3.automation" value=".\com\d3\automation"/>
-	<property name="src.dir.d3.testrails" value=".\com\d3\testrails"/>
-	<property name="src.dir.gurock.testrails" value=".\com\gurock\testrail"/>
-	<property name="src.dir.d3.utils" value=".\com\d3\utils"/>
-	<property name="libs.dir" value="..\libs"/>
-    <property name="reports.dir" value="..\reports"/>
-    <property name="conf.dir" value="..\conf"/>
+	<property name="build.dir" value="build"/>
+	<property name="src.dir.d3.automation" value="src\com\d3\automation"/>
+	<property name="src.dir.d3.testrails" value="src\com\d3\testrails"/>
+	<property name="src.dir.gurock.testrails" value="src\com\gurock\testrail"/>
+	<property name="src.dir.d3.utils" value="src\com\d3\utils"/>
+	<property name="libs.dir" value="libs"/>
+    <property name="reports.dir" value="reports"/>
+    <property name="conf.dir" value="conf"/>
 	
     <!-- options -->
 	<property name="javac.deprecation" value="on"/>
