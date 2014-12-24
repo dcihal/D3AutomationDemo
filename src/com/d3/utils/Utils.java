@@ -237,14 +237,14 @@ public final class Utils  {
 	            capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 	            capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 	    	    // Create a new instance of the Internet Explorer driver
-	        	file = new File("C:\\Selenium 2\\IEDriverServer.exe");
+	        	file = new File(".\\libs\\IEDriverServer.exe");
 	        	System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
 	        	driver = new InternetExplorerDriver(capabilities);
 	        	driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
 	        	driver.manage().window().maximize();
 	    	    return driver;
 	        case CHROME:
-	        	file = new File("C:\\Selenium 2\\chromedriver.exe");
+	        	file = new File(".\\libs\\chromedriver.exe");
 	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 	        	driver = new ChromeDriver();
 	        	driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
