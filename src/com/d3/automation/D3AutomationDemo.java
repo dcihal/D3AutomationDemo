@@ -39,8 +39,8 @@ public class D3AutomationDemo {
 
 
 	@BeforeTest
-	@Parameters({"browse"})
-	public void launchBrowser(String browse)
+	@Parameters({"browse", "WebdriverTimeout"})
+	public void launchBrowser(String browse, String WebdriverTimeout)
 	{
     	switch (browse)
     	{
@@ -60,8 +60,8 @@ public class D3AutomationDemo {
 
     	}
     	
-        String webdriverTimeout = p.getProperty("WebdriverTimeout");
-    	Long timeout = Long.valueOf(webdriverTimeout);
+        //String webdriverTimeout = p.getProperty("WebdriverTimeout");
+    	Long timeout = Long.valueOf(WebdriverTimeout);
         driver = Utils.getWebDriver(browser, timeout); 
 		
 		driver.get(baseUrl);

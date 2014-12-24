@@ -1,8 +1,10 @@
 <suite name="D3AutomationDemo Tests" verbose="2">
-<parameter name="browse" value="CHROME" />
+<parameter name="browse" value="FIREFOX"/><parameter
+		name="WebdriverTimeout" value="30">
+</parameter>
 
 
-<test name="D3AutomationDemo Test Classes">
+	<test name="D3AutomationDemo Test Classes">
  <classes>
       <class name="com.d3.automation.D3AutomationDemo"/>
  </classes>
