@@ -62,11 +62,11 @@ public class D3AutomationDemo {
     	
         String webdriverTimeout = p.getProperty("WebdriverTimeout");
     	Long timeout = Long.valueOf(webdriverTimeout);
-        driver = Utils.getWebDriver(browser, webdriverTimeout); 
+        driver = Utils.getWebDriver(browser, timeout); 
 		
 		driver.get(baseUrl);
 
-	   	bl.init(driver, webdriverTimeout);
+	   	bl.init(driver, timeout);
 		d3testrails.InitRail(p.getProperty("testRailUrl"), p.getProperty("testRailUserName"), p.getProperty("testRailPassWord"));
   }
 			
