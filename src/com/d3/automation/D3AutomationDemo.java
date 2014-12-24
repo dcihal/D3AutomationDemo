@@ -76,7 +76,7 @@ public class D3AutomationDemo {
 	   bl.submit(driver);
 	   WebDriverWait wait = new WebDriverWait(driver, 10);
 	   //wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//div[@class='user-alert']"), "Invalid User Credentials"));
-	   Utils.isTextPresent(driver, "Invalid1");
+	   Utils.isTextPresent(driver, "Invalid");
 
   }
   
