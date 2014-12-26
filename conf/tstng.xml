@@ -12,7 +12,8 @@
 
 	<test name="D3AutomationDemo Test Classes">
  <classes>
-      <class name="com.d3.automation.D3AutomationDemo"/>
+      <class name="com.d3.automation.D3AutomationDemo"></class>
+      <class name="com.d3.automation.LookAndFeel"></class>
  </classes>
-</test>
+	</test>
 </suite>
