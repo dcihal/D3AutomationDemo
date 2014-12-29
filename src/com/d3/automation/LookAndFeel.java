@@ -3,7 +3,7 @@ package com.d3.automation;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Date;
-import java.util.Properties;
+
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -27,9 +27,9 @@ public class LookAndFeel {
 		D3TestRails d3testrails = new D3TestRails();
 		Utils utils = new Utils();
 	   	//Properties p = Utils.loadProperties(".\\conf\\properties.properties");            
-		private String userName;
 
-		@BeforeTest
+
+		@BeforeClass
 		@Parameters({"browse", "WebdriverTimeout", "baseurl"})
 		public void launchBrowser(@Optional("FIREFOX") String browse, String WebdriverTimeout, String baseurl)
 		{
@@ -60,7 +60,7 @@ public class LookAndFeel {
 
 		}
 					
-		@BeforeTest
+		@BeforeClass
 		@Parameters({"testRailUrl", "testRailUserName", "testRailPassWord"})
 		public void initTestRails(String testRailUrl, String testRailUserName, String testRailPassWord)
 		{	
@@ -92,7 +92,6 @@ public class LookAndFeel {
 	        try {
 				d3testrails.Passed(TestRun, TestCase, "It worked!");
 			} catch (IOException | APIException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 	        //System.out.print("Successful TestRun [" + TestRun + "] TestCase[" + TestCase + "]\n");
@@ -102,7 +101,6 @@ public class LookAndFeel {
 	         try {
 	 			d3testrails.Failed(TestRun, TestCase, "It failed!");
 	 		} catch (IOException | APIException e) {
-	 			// TODO Auto-generated catch block
 	 			e.printStackTrace();
 	 		}
 	        //System.out.print("Failed TestRun [" + TestRun + "] TestCase[" + TestCase + "]\n");
@@ -124,7 +122,7 @@ public class LookAndFeel {
 	  
 
 	   
-	  @AfterTest
+	  @AfterClass
 	  public void terminateBrowser()
 	  {
 		  driver.quit();

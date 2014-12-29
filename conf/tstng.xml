@@ -10,7 +10,7 @@
 	<parameter name="secretQuestion" value="denver"></parameter>
 
 
-	<test name="D3AutomationDemo Test Classes">
+	<test name="D3AutomationDemo Test Classes" preserve-order="true" parallel="false">
  <classes>
       <class name="com.d3.automation.D3AutomationDemo"></class>
       <class name="com.d3.automation.LookAndFeel"></class>
