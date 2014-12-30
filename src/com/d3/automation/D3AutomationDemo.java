@@ -29,7 +29,7 @@ public class D3AutomationDemo {
 
 	@BeforeClass
 	@Parameters({"browse", "WebdriverTimeout", "baseurl"})
-	public void launchBrowser(@Optional("FIREFOX") String browse, String WebdriverTimeout, String baseurl)
+	public void launchBrowser(@Optional("CHROME") String browse, String WebdriverTimeout, String baseurl)
 	{
     	switch (browse)
     	{

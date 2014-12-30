@@ -26,12 +26,13 @@ public class LookAndFeel {
 		D3BusinessLogic bl = new D3BusinessLogic();
 		D3TestRails d3testrails = new D3TestRails();
 		Utils utils = new Utils();
+
 	   	//Properties p = Utils.loadProperties(".\\conf\\properties.properties");            
 
 
 		@BeforeClass
 		@Parameters({"browse", "WebdriverTimeout", "baseurl"})
-		public void launchBrowser(@Optional("FIREFOX") String browse, String WebdriverTimeout, String baseurl)
+		public void launchBrowser(@Optional("CHROME") String browse, String WebdriverTimeout, String baseurl)
 		{
 	    	switch (browse)
 	    	{

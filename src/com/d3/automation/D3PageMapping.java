@@ -80,5 +80,17 @@ public class D3PageMapping {
     @FindBy(how = How.CSS, using = "div.nav-icon.settings.center")
     
     public WebElement Settings;
+    
+    @FindBy(how = How.CLASS_NAME, using = "button-header")
+    
+    public WebElement QuickPay;
+    
+    @FindBy(how = How.CLASS_NAME, using = "select2-chosen")
+    
+    public WebElement SelectRecipient;
 	
+    @FindBy(how = How.CLASS_NAME, using = "select2-result-label")
+    
+    public WebElement MyCreditCardAccount;
+    
 }

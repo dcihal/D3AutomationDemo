@@ -225,7 +225,9 @@ public final class Utils  {
 	    	    return driver; 
 	        case IE:
 	        	DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+	    		capabilities.setCapability("nativeEvents", false);
 	        	capabilities.setCapability("ignoreProtectedModeSettings", true);
+	        	capabilities.setCapability("requireWindowFocus", true);
 	            capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 	            capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 	    	    // Create a new instance of the Internet Explorer driver

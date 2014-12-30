@@ -14,6 +14,7 @@
  <classes>
       <class name="com.d3.automation.D3AutomationDemo"></class>
       <class name="com.d3.automation.LookAndFeel"></class>
+      <class name="com.d3.automation.QuickPayTransferFutureDate"></class>
  </classes>
 	</test>
 </suite>
