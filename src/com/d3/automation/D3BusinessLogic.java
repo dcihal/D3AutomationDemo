@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.openqa.selenium.Keys;
 
+import com.d3.utils.Utils;
+
 
 
 public class D3BusinessLogic {
@@ -171,8 +173,43 @@ public class D3BusinessLogic {
 	    Actions action = new Actions(driver);    
 	   		action.moveToElement(Mapping.MyCreditCardAccount).click().build().perform();   
     }
-       
 
+    public void setQuickPayAmount(WebDriver driver, String amount)
+    {
+	    wait.until(ExpectedConditions.visibilityOf(Mapping.Amount));	
+	    new Actions(driver).moveToElement(Mapping.Amount).perform();
+	    Mapping.Amount.sendKeys(amount);; 
+    }
+    
+    public void quickPayCalendarCurrentDate(WebDriver driver)
+    {
+	    wait.until(ExpectedConditions.visibilityOf(Mapping.QuickPayCalendar));	
+	    new Actions(driver).moveToElement(Mapping.QuickPayCalendar).perform();
+	    Mapping.QuickPayCalendar.sendKeys(Utils.getDateMMddyyyywithSlash()); 
+    }
+    
+    public void quickPayCalendarSpecificDate(WebDriver driver, String date)
+    {
+	    wait.until(ExpectedConditions.visibilityOf(Mapping.QuickPayCalendar));	
+	    new Actions(driver).moveToElement(Mapping.QuickPayCalendar).click();
+	    Mapping.QuickPayCalendar.sendKeys(date); 
+    }
+    
+    public void quickPaySubmitButton(WebDriver driver)
+    {
+	    wait.until(ExpectedConditions.visibilityOf(Mapping.QuickPaySubmit));	
+	    Actions action = new Actions(driver);    
+   		action.moveToElement(Mapping.QuickPaySubmit).click().build().perform();   
+    }
+    
+    public void quickPayConfirm(WebDriver driver)
+    {
+	    wait.until(ExpectedConditions.visibilityOf(Mapping.QuickPayConfirm));	
+	    Actions action = new Actions(driver);    
+   		action.moveToElement(Mapping.QuickPayConfirm).click().build().perform();   
+    }
+    
+    
 }
 
 

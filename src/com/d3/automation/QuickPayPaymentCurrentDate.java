@@ -6,6 +6,7 @@ import java.sql.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -37,7 +38,7 @@ public class QuickPayPaymentCurrentDate {
 
 	@BeforeClass
 	@Parameters({"browse", "WebdriverTimeout", "baseurl"})
-	public void launchBrowser(@Optional("CHROME") String browse, String WebdriverTimeout, String baseurl)
+	public void launchBrowser(@Optional("FIREFOX") String browse, String WebdriverTimeout, String baseurl)
 	{
     	switch (browse)
     	{
@@ -76,7 +77,7 @@ public class QuickPayPaymentCurrentDate {
 	
 	  @Test(priority = 17)
 	  @Parameters({"userName", "passWord", "secretQuestion"})
-	  public void verifyQuickPayFutureDate(String userName, String passWord, String secretQuestion) 
+	  public void verifyQuickPayCurrentDate(String userName, String passWord, String secretQuestion) 
 	  {
 		   TestCase = "333";
 		   bl.loginUn(driver, userName);
@@ -90,6 +91,14 @@ public class QuickPayPaymentCurrentDate {
 		   Utils.isTextPresent(driver, "BEST BUY");
 		   bl.myCreditCardAccount(driver);
 		   Utils.isTextPresent(driver, "AMOUNT");
+		   driver.findElement(By.name("amount")).clear();
+		   bl.setQuickPayAmount(driver, "1");
+		   driver.findElement(By.name("scheduledDate")).clear();
+		   bl.quickPayCalendarCurrentDate(driver);
+		   bl.quickPaySubmitButton(driver);
+		   Utils.isTextPresent(driver, "A payment of $1.00 to BEST BUY is scheduled for 12/31/2014.");
+		   bl.quickPayConfirm(driver);
+		   Utils.isTextPresent(driver, "The payment was not scheduled. Please try again.");
 	  } 
 
   @AfterMethod
