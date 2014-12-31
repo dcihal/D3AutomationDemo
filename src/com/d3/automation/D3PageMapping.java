@@ -89,8 +89,8 @@ public class D3PageMapping {
     
     public WebElement SelectRecipient;
 	
-    @FindBy(how = How.CLASS_NAME, using = "select2-result-label")
-    
+    @FindBy(how = How.ID, using = "select2-result-label-8")
+    //@FindBy(how = How.CLASS_NAME, using = "select2-result-label")
     public WebElement MyCreditCardAccount;
     
 }
