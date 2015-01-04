@@ -96,7 +96,7 @@ public class QuickPayPaymentCurrentDate {
 		   driver.findElement(By.name("scheduledDate")).clear();
 		   bl.quickPayCalendarCurrentDate(driver);
 		   bl.quickPaySubmitButton(driver);
-		   Utils.isTextPresent(driver, "A payment of $1.00 to BEST BUY is scheduled for 12/31/2014.");
+		   Utils.isTextPresent(driver, "A payment of $1.00 to BEST BUY is scheduled for");
 		   bl.quickPayConfirm(driver);
 		   Utils.isTextPresent(driver, "The payment was not scheduled. Please try again.");
 	  } 

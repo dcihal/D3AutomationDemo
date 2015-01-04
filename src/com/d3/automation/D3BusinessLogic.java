@@ -191,7 +191,7 @@ public class D3BusinessLogic {
     public void quickPayCalendarSpecificDate(WebDriver driver, String date)
     {
 	    wait.until(ExpectedConditions.visibilityOf(Mapping.QuickPayCalendar));	
-	    new Actions(driver).moveToElement(Mapping.QuickPayCalendar).click();
+	    new Actions(driver).moveToElement(Mapping.QuickPayCalendar).perform();
 	    Mapping.QuickPayCalendar.sendKeys(date); 
     }
     
@@ -199,7 +199,7 @@ public class D3BusinessLogic {
     {
 	    wait.until(ExpectedConditions.visibilityOf(Mapping.QuickPaySubmit));	
 	    Actions action = new Actions(driver);    
-   		action.moveToElement(Mapping.QuickPaySubmit).click().build().perform();   
+   		action.moveToElement(Mapping.QuickPaySubmit).click().build().perform();
     }
     
     public void quickPayConfirm(WebDriver driver)
